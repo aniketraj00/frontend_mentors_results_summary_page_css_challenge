@@ -1,0 +1,228 @@
+@font-face {
+    font-family: 'HG';
+    src: url('/assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
+}
+
+:root {
+    --light_red: hsl(0, 100%, 67%);
+    --light_red_alpha: hsla(0, 100%, 67%, 0.1);
+    --orangey_yellow: hsl(39, 100%, 56%);
+    --orangey_yellow_alpha: hsla(39, 100%, 56%, 0.1); 
+    --green_teal: hsl(166, 100%, 37%);
+    --green_teal_alpha: hsla(166, 100%, 37%, 0.1);
+    --cobalt_blue: hsl(234, 85%, 45%);
+    --cobalt_blue_alpha: hsla(234, 85%, 45%, 0.1);
+    --light_slate_blue: hsl(252, 100%, 67%);
+    --light_royal_blue: hsl(241, 81%, 54%);
+    --violet_blue: hsla(256, 72%, 46%, 1);
+    --persian_blue: hsla(241, 72%, 46%, 0.25);
+    --custom_white: hsl(0, 0%, 100%);
+    --pale_blue: hsl(221, 100%, 96%);
+    --light_lavender: hsl(241, 100%, 89%);
+    --dark_gray_blue: hsl(224, 30%, 27%);
+    --light_gray_blue: hsl(228, 45%, 44%);
+    --p_1x: 18px;
+    --corner_radius: 24px
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: var(--p_1x);
+    box-sizing: border-box;
+    font-family: 'HG';
+}
+
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 90% 10%;
+    background: var(--pale_blue);
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress_card {
+    max-width: 550px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1;
+    background: var(--custom_white);
+    border-radius: var(--corner_radius);
+    box-shadow: 5px 10px 30px var(--persian_blue);
+}
+
+.progress_card__score {
+    background: linear-gradient(var(--light_slate_blue), var(--light_royal_blue));
+    padding: 1.5rem;
+    border-radius: var(--corner_radius);
+}
+
+.progress_card__score-head {
+    color: var(--pale_blue);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.progress_card__score--container {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: var(--persian_blue);
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.progress_card__score--container > p.score {
+    color: var(--custom_white);
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.progress_card__score--container > p.out_of {
+    font-size: 0.75rem;
+    color: var(--light_lavender);
+}
+
+.progress_card__score > p.score_remark {
+    text-align: center;
+    color: var(--custom_white);
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.progress_card__score > p.score_insight {
+    text-align: center;
+    font-size: 0.7rem;
+    color: var(--light_lavender);
+    margin-bottom: 1.5rem;
+}
+
+.progress_card__summary {
+    margin: 1.5rem;
+}
+
+.progress_card__summary > p {
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.progress_card__summary--container {
+    margin-bottom: 1.5rem;
+}
+
+.progress_card__summary--container > .list_item{
+    display: grid;
+    grid-template-columns: 10% 60% 30%;
+    grid-template-rows: 1;
+    margin: 0.6rem 0rem;
+    padding: 0.6rem;
+    border-radius: 0.3rem;
+    align-items: center;
+}
+
+.progress_card__summary--container>.list_item > img {
+    width: 75%;
+}
+
+.progress_card__summary--container > .list_item > p,
+.progress_card__summary--container > .list_item > p > span {
+    font-size: 0.7rem;
+}
+
+.text_red {
+    color: var(--light_red);
+}
+
+.text_orangey_yellow {
+    color: var(--orangey_yellow);
+}
+
+.text_green_teal {
+    color: var(--green_teal);
+}
+
+.text_cobalt_blue {
+    color: var(--cobalt_blue);
+}
+
+.text_persian_blue {
+    color: var(--persian_blue);
+}
+
+.bg_red-alpha {
+    background: var(--light_red_alpha);
+}
+
+.bg_orangey_yellow_alpha {
+    background: var(--orangey_yellow_alpha);
+}
+
+.bg_green_teal_alpha {
+    background: var(--green_teal_alpha);
+}
+
+.bg_cobalt_blue_alpha {
+    background: var(--cobalt_blue_alpha);
+}
+
+.progress_card__summary > button {
+    width: 100%;
+    padding: 0.7rem 0;
+    border-radius: var(--corner_radius);
+    border: none;
+    font-size: 0.8rem;
+    color: var(--custom_white);
+    background: linear-gradient(var(--light_slate_blue), var(--light_royal_blue));
+    cursor: pointer;
+}
+
+.progress_card__summary > button:active {
+    background: var(--dark_gray_blue);
+}
+
+.text_700 {
+    font-weight: 700;
+}
+
+.attribution {
+    height: 100%;
+    font-size: 11px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.attribution a {
+    color: var(--light_gray_blue);
+}
+
+@media (max-width: 375px) {
+    .container {
+        align-items: start;
+    }
+    .progress_card {
+        display: block;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .progress_card__score {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+}
